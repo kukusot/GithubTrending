@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_height">150dp</dimen>
+    <dimen name="row_padding_vertical">12dp</dimen>
+    <dimen name="row_padding_horizontal">8dp</dimen>
+    <dimen name="list_divider_size">4dp</dimen>
+    <dimen name="description_margin">8dp</dimen>
+    <dimen name="repo_name_size">18sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+</resources>
