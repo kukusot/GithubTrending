@@ -21,3 +21,7 @@ Paging is done with the [Paging Library](https://developer.android.com/topic/lib
 
 ## Reflections
 * For the time being tests are not implemented. But with the current app architecture, it is very easy to test the 3 layers of the App (UI, Viewmodels and Data).
+
+## Screenshots
+![repositories](_assets/screenshot1.png)
+![repository details](_assets/screenshot2.png)
