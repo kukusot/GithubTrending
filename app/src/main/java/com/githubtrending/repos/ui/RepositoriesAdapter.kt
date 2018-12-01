@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.item_repository.view.*
 class RepositoriesAdapter :
     PagedListAdapter<GithubRepository, RepositoriesAdapter.RepositoryViewHolder>(BeachesDiffCallback) {
 
-    var repoClickListener: ((url: String?) -> Unit)? = null
+    var repoClickListener: ((repo: GithubRepository?) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
         val itemView = parent.inflate(R.layout.item_repository, false)
@@ -40,7 +40,7 @@ class RepositoriesAdapter :
                 val updatedText = if (timeAgo != null) context.getString(R.string.updated, timeAgo) else ""
                 updated.text = updatedText
                 setOnClickListener {
-                    repoClickListener?.invoke(repo?.htmlUrl)
+                    repoClickListener?.invoke(repo)
                 }
             }
         }

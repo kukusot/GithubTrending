@@ -13,5 +13,7 @@
     <string name="updated">Updated %s</string>
     <string name="android">Android</string>
     <string name="repository_results">%s repository results</string>
+    <string name="error">An error occurred</string>
+    <string name="link">Web Link</string>
 
 </resources>

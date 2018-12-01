@@ -9,14 +9,15 @@ If you have any questions/problems please feel free to contact me.
 
 ## Project Architecture
 The application architecture is MVVM using Architecture Components.
-Paging is done with the [Paging Library](https://developer.android.com/topic/libraries/architecture/paging/) from the Architecture Components.
 It allows to unit test every layer and keep view logic and business logic independent.
 For async working the app relies solely on Kotlin coroutines.
+Paging is done with the [Paging Library](https://developer.android.com/topic/libraries/architecture/paging/) from the Architecture Components.
 
 ## Tools used
 * [Dagger 2](https://github.com/google/dagger) for dependency injection
 * [Retrofit](https://github.com/square/retrofit) and [OkHttp](https://github.com/square/okhttp) for network calls
 * [Gson](https://github.com/google/gson) for convenient JSON parsing
+* [Glide](https://github.com/bumptech/glide) for displaying images
 
 ## Reflections
 * For the time being tests are not implemented. But with the current app architecture, it is very easy to test the 3 layers of the App (UI, Viewmodels and Data).

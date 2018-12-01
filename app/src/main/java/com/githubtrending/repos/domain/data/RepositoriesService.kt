@@ -13,6 +13,7 @@ interface RepositoriesService {
     @GET("search/repositories")
     fun getRepositories(
         @Query("q") query: String = "android",
+        @Query("sort") sort: String = "stars",
         @Query("page") page: Int,
         @Query("per_page") perPage: Int = PAGE_SIZE
     ): Deferred<Response<RepositoryResponse>>

@@ -17,15 +17,16 @@
                                                        android:layout_height="match_parent">
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   android:textColor="@color/repoName"
                   android:id="@+id/name"
                   tools:text="Repo Name"
                   android:textStyle="bold"
                   app:layout_constraintLeft_toLeftOf="parent"
-                  app:layout_constraintTop_toTopOf="parent"
-                  android:layout_height="wrap_content"/>
+                  app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   tools:text="Repos description"
                   android:maxLines="3"
                   android:layout_marginTop="@dimen/description_margin"
@@ -33,43 +34,42 @@
                   android:textSize="@dimen/text_size_medium"
                   app:layout_constraintLeft_toLeftOf="parent"
                   app:layout_constraintTop_toBottomOf="@+id/name"
-                  android:id="@+id/description"
-                  android:layout_height="wrap_content"/>
+                  android:id="@+id/description"/>
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   android:id="@+id/licence"
                   tools:text="GPL-3.0 licence"
                   android:textSize="@dimen/text_size_small"
                   app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintLeft_toLeftOf="parent"
-                  android:layout_height="wrap_content"/>
+                  app:layout_constraintLeft_toLeftOf="parent"/>
 
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   android:id="@+id/updated"
                   tools:text="Updated: 3 days ago"
                   app:layout_constraintBottom_toBottomOf="parent"
                   android:layout_marginStart="8dp"
                   android:textSize="@dimen/text_size_small"
-                  app:layout_constraintLeft_toRightOf="@+id/licence"
-                  android:layout_height="wrap_content"/>
+                  app:layout_constraintLeft_toRightOf="@+id/licence"/>
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   android:id="@+id/stars"
                   android:drawableStart="@drawable/ic_star"
                   tools:text="3.5k"
                   android:textSize="@dimen/text_size_small"
                   app:layout_constraintTop_toTopOf="parent"
-                  app:layout_constraintRight_toRightOf="parent"
-                  android:layout_height="wrap_content"/>
+                  app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
                   android:id="@+id/language"
                   app:layout_constraintTop_toTopOf="parent"
                   android:layout_marginEnd="8dp"
                   tools:text="Language: Kotlin"
-                  app:layout_constraintRight_toLeftOf="@+id/stars"
-                  android:layout_height="wrap_content"/>
+                  app:layout_constraintRight_toLeftOf="@+id/stars"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

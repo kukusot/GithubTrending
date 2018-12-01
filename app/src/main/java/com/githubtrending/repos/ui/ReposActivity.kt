@@ -1,19 +1,25 @@
 package com.githubtrending.repos.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.githubtrending.R
+import com.githubtrending.repos.details.RepoDetailsActivity
 import dagger.android.AndroidInjection
 import com.githubtrending.repos.domain.data.NetworkState.*
+import com.githubtrending.repos.domain.model.GithubRepository
 import com.githubtrending.utils.*
 import kotlinx.android.synthetic.main.activity_repos.*
 
 import javax.inject.Inject
+
+const val REPO_KEY = "repo_key"
 
 class ReposActivity : AppCompatActivity() {
 
@@ -36,13 +42,20 @@ class ReposActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         adapter = RepositoriesAdapter()
         adapter.repoClickListener = {
-            openUrlInWebView(it)
+            startDetailsActivity(it)
         }
         recyclerView.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@ReposActivity, RecyclerView.VERTICAL, false)
             addItemDecoration(ListDivider(this@ReposActivity))
             adapter = this@ReposActivity.adapter
+        }
+    }
+
+    private fun startDetailsActivity(repo: GithubRepository?) {
+        Intent(this, RepoDetailsActivity::class.java).apply {
+            putExtra(REPO_KEY, repo)
+            startActivity(this)
         }
     }
 

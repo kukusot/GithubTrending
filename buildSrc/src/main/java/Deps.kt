@@ -21,6 +21,7 @@ object Versions {
     val materialVersion = "1.0.0"
     val lifecycleVersion = "2.0.0"
     val paging = "2.1.0-beta01"
+    val glide = "4.8.0"
 
 }
 
@@ -50,5 +51,7 @@ object Deps {
     val meterialComponents = "com.google.android.material:material:${Versions.materialVersion}"
     val lifeCycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
     val paging = "androidx.paging:paging-runtime:${Versions.paging}"
+    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
 
 }

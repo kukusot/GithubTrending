@@ -50,6 +50,9 @@ dependencies {
 
     implementation Deps.paging
 
+    implementation Deps.glide
+    kapt Deps.glideCompiler
+
     testImplementation Deps.jUnit
     androidTestImplementation Deps.androidTestRunner
     androidTestImplementation Deps.espressoCore
